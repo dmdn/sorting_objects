@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>myJS - task 02</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>Каталог почтовых марок</h1>
+
+<div class="block-catalog">
+    <div class='catalog-filter'>
+        <ul class="sort-block">
+            <span>Сортировать по номеру в каталоге:</span>
+            <li id="increase"><a href="#">&#8593; По возрастанию</a></li>
+            <li id="decrease"><a href="#">&#8595; По убыванию</a></li>
+        </ul>
+        <ul class="sort-block">
+            <span>Показать по тематике:</span>
+            <li id="filter-all" class="filter-active"><a href="#">Все</a></li>
+            <li id="show-space"><a href="#">Космос</a></li>
+            <li id="show-post"><a href="#">История почты</a></li>
+            <li id="show-ship"><a href="#">Корабли</a></li>
+        </ul>
+    </div>
+
+    <div class='catalog'>
+    </div>
+
+</div>
+
+<template id="catalog-item-template" style="display: none">
+    <article class='catalog-item'>
+        <h3 class="subject"></h3>
+        <img class="img-stamp"><br>
+        <span>№ в каталоге: <div class="namber"></div></span><br>
+        <span>Цена: <div class="price"></div> коп.</span></span>
+    </article>
+</template>
+
+<script src='data/stamps.js'></script>
+<script src='js/stamps-list.js'></script>
+
+</body>
+</html>
